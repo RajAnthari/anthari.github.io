@@ -2,59 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rajesh Anthari - Portfolio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #f9f9f9;
-      color: #333;
-      margin: 0;
-      padding: 50px;
-    }
-    header {
-      background: #0073e6;
-      color: white;
-      padding: 20px;
-      border-radius: 8px;
-    }
-    section {
-      margin: 30px auto;
-      max-width: 600px;
-      text-align: left;
-    }
-    h1 { margin: 0; }
-    footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #666;
-    }
+    /* Reset & basics */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; background: #f9fafc; color: #333; }
+    a { color: #0073e6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Header / Navbar */
+    header { background: #0073e6; color: white; padding: 20px 0; }
+    nav { display: flex; justify-content: center; gap: 20px; }
+    nav a { color: white; font-weight: bold; }
+
+    /* Hero section */
+    .hero { text-align: center; padding: 80px 20px; background: #e6f0ff; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    .hero p { font-size: 1.2rem; }
+
+    /* Section styling */
+    section { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+    h2 { margin-bottom: 20px; color: #0073e6; }
+
+    /* Projects grid */
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .card h3 { margin-bottom: 10px; }
+    .card p { font-size: 0.9rem; margin-bottom: 10px; }
+    .card a { font-weight: bold; }
+
+    /* Footer */
+    footer { text-align: center; padding: 20px; background: #f1f1f1; margin-top: 40px; font-size: 14px; }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Hi, I'm Rajesh Anthari 👋</h1>
-    <p>Software Developer | Java | Full Stack</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section>
+  <section class="hero">
+    <h1>Hi, I'm Rajesh Anthari 👋</h1>
+    <p>Java Developer | Full Stack | Cloud Enthusiast</p>
+  </section>
+
+  <section id="about">
     <h2>About Me</h2>
     <p>
-      I’m a passionate developer with experience in Java, Spring, Angular, and Cloud (AWS/Kubernetes).
-      This site is my tech portfolio where I’ll share my work, projects, and blog posts.
+      I am a passionate software developer with expertise in Java, Spring, Angular, 
+      microservices, and cloud technologies (AWS, Kubernetes). 
+      I love building scalable systems and solving real-world problems with clean, efficient code.
     </p>
   </section>
 
-  <section>
+  <section id="projects">
     <h2>Projects</h2>
-    <ul>
-      <li><a href="https://github.com/YOUR_GITHUB_PROJECT">Project 1 - Java Microservice</a></li>
-      <li><a href="https://github.com/YOUR_GITHUB_PROJECT">Project 2 - Angular Client</a></li>
-    </ul>
+    <div class="projects">
+      <div class="card">
+        <h3>Microservices Project</h3>
+        <p>Designed and implemented scalable Java microservices using Spring Boot & Kafka.</p>
+        <a href="https://github.com/YOUR_GITHUB_PROJECT" target="_blank">View on GitHub</a>
+      </div>
+      <div class="card">
+        <h3>Angular Client</h3>
+        <p>Developed a responsive Angular frontend for managing healthcare workflows.</p>
+        <a href="https://github.com/YOUR_GITHUB_PROJECT" target="_blank">View on GitHub</a>
+      </div>
+      <div class="card">
+        <h3>Kubernetes Setup</h3>
+        <p>Automated deployment of services on AWS EKS cluster using Helm & CI/CD.</p>
+        <a href="#">Documentation</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:contact@anthari.in">contact@anthari.in</a></p>
+    <p>GitHub: <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">github.com/YOUR_GITHUB_USERNAME</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">linkedin.com/in/YOUR_LINKEDIN</a></p>
   </section>
 
   <footer>
-    © 2025 Rajesh Anthari | <a href="mailto:contact@anthari.in">contact@anthari.in</a>
+    © 2025 Rajesh Anthari | Built with ❤ on GitHub Pages
   </footer>
+
 </body>
 </html>
